@@ -66,8 +66,6 @@ const Weather = () => {
       <div className="weather">
         <div className="weather-container">
           <div className="weather-current">
-            <h4>{/* {base.name}, {base.sys?.country} */}</h4>
-            {/* <small>{displayDate(base.dt)}</small> */}
             <div className="weather-info">
               <div className="weather-date-time">
                 <div className="weather-date">
@@ -86,14 +84,12 @@ const Weather = () => {
                 <div className="weather-min-max">
                   <div className="weather-max">
                     <p>
-                      {/* {parseInt(base.main?.temp_min) - (273.15).toFixed()} */}
                       Min : {weatherData?.feelslike}
                       <sup>°</sup>
                     </p>
                   </div>
                   <div className="weather-min">
                     <p>
-                      {/* {parseInt(base.main?.temp_max) - (273.15).toFixed()} */}
                       Max : {weatherData?.humidity}
                       <sup>°</sup>
                     </p>
