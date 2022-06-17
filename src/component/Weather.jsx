@@ -14,14 +14,14 @@ const Weather = () => {
     getWeatherData("london");
   }, []);
 
-  const getWeatherData = async (title) => {
-    const response = await fetch(`${API_URL}&query=${title}`);
-    const data = await response.json();
-    console.log(data);
-
-    setWeatherData(data.current);
-    setLocation(data.location);
-    setLoading(false);
+  const getWeatherData = (title) => {
+    fetch(`${API_URL}&query=${title}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setWeatherData(data.current);
+        setLocation(data.location);
+        setLoading(false);
+      });
   };
 
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
